@@ -26,7 +26,6 @@ public class UserController {
     @GetMapping("/helloWord")
     public String helloWord(){
         String string = userService.helloWordByUserId(1);
-
         return string;
     }
 }
