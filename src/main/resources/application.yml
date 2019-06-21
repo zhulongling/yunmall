@@ -4,18 +4,20 @@ spring:
     multi: true   #开启多数据源支持
     master:       #写库配置
       name: master
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      jdbc-url: jdbc:mysql://193.112.17.50/yunmall?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true
+      driver-class-name: com.mysql.jdbc.Driver
+#      jdbc-url: jdbc:mysql://193.112.17.50/yunmall?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true
+      jdbc-url: jdbc:mysql://127.0.0.1/yunmall?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&serverTimezone=UTC
       port: 3306
       username: root
-      password: Yixia@827
+      password: 123456
     slave:        #读库配置
       name: slave
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      jdbc-url: jdbc:mysql://193.112.17.50/yunmall?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true
+      driver-class-name: com.mysql.jdbc.Driver
+#      jdbc-url: jdbc:mysql://193.112.17.50/yunmall?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true
+      jdbc-url: jdbc:mysql://127.0.0.1/yunmall?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&serverTimezone=UTC
       port: 3306
       username: root
-      password: Yixia@827
+      password: 123456
   redis:
     db0:
       database: 0

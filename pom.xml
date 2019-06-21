@@ -9,12 +9,13 @@
         <version>2.1.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.allen</groupId>
     <artifactId>yunmall</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>yunmall</name>
-    <description>Demo project for Spring Boot</description>
+    <packaging>jar</packaging>
 
+    <name>yunmall</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skipTests>true</skipTests>
@@ -118,4 +119,23 @@
         </resources>
     </build>
 
+    <profiles>
+        <profile>
+            <id>DEV</id>
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/main/resources/DEV</directory>
+                        <filtering>true</filtering>
+                    </resource>
+                    <resource>
+                        <directory>src/main/resources</directory>
+                        <excludes>
+                            <exclude>**/*</exclude>
+                        </excludes>
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+    </profiles>
 </project>
