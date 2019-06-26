@@ -1,5 +1,7 @@
-spring:
+server:
   port: 8080   #tomcat启动端口号
+
+spring:
   datasource:
     multi: true   #开启多数据源支持
     master:       #写库配置
